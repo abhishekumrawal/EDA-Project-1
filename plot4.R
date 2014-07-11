@@ -5,5 +5,4 @@ d$Date<-as.Date(d$Date)
 subdata<-subset(d, Date >= "2007-02-01")
 subdata<-subset(subdata, Date <= "2007-02-02")
 subdata$Global_active_power<-as.numeric(subdata$Global_active_power)
-#Plotting
 plot(subdata$Global_active_power/500,type="l",xlab="",ylab="Global Active Power (Kilowatts)")

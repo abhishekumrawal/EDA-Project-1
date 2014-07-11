@@ -5,5 +5,8 @@ d$Date<-as.Date(d$Date)
 subdata<-subset(d, Date >= "2007-02-01")
 subdata<-subset(subdata, Date <= "2007-02-02")
 subdata$Global_active_power<-as.numeric(subdata$Global_active_power)
-#Plotting
-plot(subdata$Global_active_power/500,type="l",xlab="",ylab="Global Active Power (Kilowatts)")
+subdata$Sub_metering_1<-as.numeric(subdata$Sub_metering_1)
+subdata$sub_metering_2<-as.numeric(subdata$sub_metering_2)
+subdata$sub_metering_2<-as.numeric(subdata$sub_metering_2)
+
+plot(subdata$Date,subdata$Sub_metering_3,type="l",ylab="Energy sub metering")
